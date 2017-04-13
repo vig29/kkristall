@@ -19,14 +19,15 @@ public class SearchEngine {
     	getList();
  
     }
-    public ArrayList<Hotel> getList() {
+    public ArrayList<Hotel> getHotelList() {
     	try {
-    		hotelList = mockdraft.retrieveHotelList();
+0,    		hotelList = mockdraft.retrieveHotelList();
     	} catch (Exception e) {
     		System.err.println("Err: " + e.getMessage());
     	}
     	return hotelList;
     }
+
     
     public ArrayList<Hotel> searchByLocation(String location) {
     	filterHotelList = new ArrayList<Hotel>();
