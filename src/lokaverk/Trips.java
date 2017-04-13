@@ -13,8 +13,13 @@ public class Trips {
   private String date;
   private String startTime;
   private String endTime;
+  private String compName;
+  private String type;
 
-  public Trips(int price, String location, String compName, String aboutTrip, String date, String startTime, String duration) {
+
+  // Adventure sighseeing heath
+
+  public Trips(int price, String location, String compName, String aboutTrip, String date, String startTime, String duration, String type) {
     this.setPrice(price);
     this.setLocation(location);
     this.setCompName(compName);
@@ -22,6 +27,7 @@ public class Trips {
     this.setDate(date);
     this.setStartTime(startTime);
     this.setDuration(duration);
+    this.setType(type)
   }
 
   public void setPrice(int price) {
@@ -64,6 +70,12 @@ public class Trips {
   }
   public String getStartTime() {
     return startTime;
+  }
+  public void setType(type){
+    this.type=type;
+  }
+  public String getType(){
+    return type;
   }
 
   public void setDuration(String duration) {
