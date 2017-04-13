@@ -14,10 +14,20 @@ public class Flight {
   private String flightTo;
   private boolean sagaClass;
   private boolean foodOnBoard;
+  private boolean seatsAvailable;
 
 
-  public Flight(int price, String depDate, String depTime String arrDate, String flightFrom, String flightTo, boolean sagaClass, boolean foodOnBoard) {
-    this.
+
+  public Flight(int price, String depDate, String depTime, String arrTime, String flightFrom, String flightTo, boolean sagaClass, boolean foodOnBoard, int seatsAvailable) {
+    this.setPrice(price);
+    this.setDepDate(depDate);
+    this.setDepTime(depTime);
+    this.setArrTime(arrTime);
+    this.setFlightFrom(flightFrom);
+    this.setFlightTo(flightTo);
+    this.setSagaClass(sagaClass);
+    this.setFoodOnBoard(foodOnBoard);
+    this.setSeatsAvailable(seatsAvailable);
   }
 
   public void setPrice(int price) {
@@ -43,12 +53,12 @@ public class Flight {
     return depTime;
   }
 
-  public void setArrDate(String arrDate) {
+  public void setArrTime(String arrTime) {
     this.arrDate = arrDate;
   }
 
-  public String getArrDate() {
-    return arrDate;
+  public String getArrTime() {
+    return arrTime;
   }
 
   public void setFlightFrom(String flightFrom) {
@@ -79,5 +89,11 @@ public class Flight {
   }
   public boolean getFoodOnBoard() {
     return foodOnBoard;
+  }
+  public void setSeatsAvailable(int seatsAvailable) {
+    this.seatsAvailable = seatsAvailable;
+  }
+  public int getSeatsAvailable() {
+    return seatsAvailable;
   }
 }

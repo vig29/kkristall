@@ -21,7 +21,7 @@ public class SearchEngine {
     }
     public ArrayList<Hotel> getList() {
     	try {
-    		hotelList = mockdraft.retrieveList();
+    		hotelList = mockdraft.retrieveHotelList();
     	} catch (Exception e) {
     		System.err.println("Err: " + e.getMessage());
     	}

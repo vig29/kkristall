@@ -2,12 +2,18 @@ package lokaverk;
 
 import java.util.ArrayList;
 import lokaverk.Hotel;
+import lokaverk.Flight;
+import lokaverk.Trips;
 
 public class DBRmock implements DBRInterface {
 	
+
+
 	private ArrayList<Hotel> hotelList = new ArrayList<Hotel>();
-	
-	public ArrayList<Hotel> retrieveList() {
+	private ArrayList<Flight> flightList = new ArrayList<Flight>();
+	private ArrayList<Trips> tripList = new ArrayList<Trips>();
+
+	public ArrayList<Hotel> retrieveHotelList() {
 		Hotel RvkGrand = new Hotel( 20000, "01-07-2017", "Hotel Grand", "Reykjavík", 2, true, true, 4);
 		hotelList.add(RvkGrand);
 		Hotel RvkGrand2 = new Hotel( 25000, "05-07-2017", "Hotel Grand", "Reykjavík", 3, true, true, 7);
@@ -53,5 +59,34 @@ public class DBRmock implements DBRInterface {
 	}
 
 
+
+	public ArrayList<Flight> retrieveFlightList() {
+		Flight Flight1 = new Flight(30000, "01-07-2017", "09:00", "10:10", "Reykjavík", "Akureyri", false, false);
+		flightList.add(Flight1);
+		Flight Flight2 = new Flight(28000, "04-07-2017", "10:30", "11:40", "Akureyri", "Reykjavík", false, false);
+		flightList.add(Flight2);
+		Flight Flight3 = new Flight(22000, "10-08-2017", "08:40", "09:30", "Höfn", "Reykjavík", false, false);
+		flightList.add(Flight3);
+		Flight Flight4 = new Flight(22000, "13-08-2017", "10:00", "10:50", "Reykjavík", "Höfn", false, false);
+		flightList.add(Flight4);
+		Flight Flight5 = new Flight(15000, "02-06-2017", "15:00", "16:40", "Ísafjörður", "Höfn", false, true);
+		flightList.add(Flight5);
+		Flight Flight6 = new Flight(15500, "06-06-2017", "17:00", "18:40", "Höfn", "Ísafjörður", false, true);
+		flightList.add(Flight6);
+		Flight Flight7 = new Flight(20000, "21-12-2017", "06:40", "08:00", "Egilsstaðir", "Reykjavík", true, true);
+		flightList.add(Flight7);
+		Flight Flight8 = new Flight(20000, "28-12-2017", "08:30", "09:50", "Reykjavík", "Egilsstaðir", true, true);
+		flightList.add(Flight8);
+	}
+
+	public ArrayList<Trips> retrieveTripList() {
+		Trips Trip1 = new Trips(20000, "Reykjavík", "Elding", "Bátsferð með Eldingu, Hvalaskoðun", "22-12-2017", "17:00", "02:00");
+		tripList.add(Trip1);
+		Trips Trip2 = new Trips(150000, "Akureyri", "Fly With Me", "Þyrluferð yfir stór Reykjavíkursvæðið með guide", "03-07-2017", "21:00", "01:00");
+		tripList.add(Trip2);
+		Trips Trip3 = new Trips(40000, "Höfn", "Glacier Guides", "Snjósleðaferð uppá hálendi Íslands", "12-08-2017", "11:00", "04:00");
+		tripList.add(Trip3);
+
+	}
 }
 

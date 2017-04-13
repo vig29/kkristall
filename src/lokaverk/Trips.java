@@ -12,10 +12,16 @@ public class Trips {
   private String aboutTrip;
   private String date;
   private String startTime;
-  private String endtime;
+  private String endTime;
 
-  public Trips(int price, String location, String tripType, String aboutTrip, String date, String startTime, String endTime) {
-
+  public Trips(int price, String location, String compName, String aboutTrip, String date, String startTime, String duration) {
+    this.setPrice(price);
+    this.setLocation(location);
+    this.setCompName(compName);
+    this.setAboutTrip(aboutTrip);
+    this.setDate(date);
+    this.setStartTime(startTime);
+    this.setDuration(duration);
   }
 
   public void setPrice(int price) {
@@ -32,10 +38,38 @@ public class Trips {
     return location;
   }
 
-  public void setTripType(String tripType) {
-    this.tripType = tripType;
+  public void setCompName(String compName) {
+    this.compName = compName;
   }
-  public String getTripType() {
-    return tripType;
+  public String getCompName() {
+    return compName;
   }
-  
+
+  public void setAboutTrip(String aboutTrip) {
+    this.aboutTrip = aboutTrip;
+  }
+  public String getAboutTrip() {
+    return aboutTrip;
+  }
+
+  public void setDate(String date) {
+    this.date = date;
+  }
+  public String getDate() {
+    return date;
+  }
+
+  public void setStartTime(String startTime) {
+    this.startTime = startTime;
+  }
+  public String getStartTime() {
+    return startTime;
+  }
+
+  public void setDuration(String duration) {
+    this.duration = duration;
+  }
+  public String getDuration() {
+    return duration;
+  }
+}
