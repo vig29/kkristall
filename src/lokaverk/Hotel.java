@@ -5,7 +5,7 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 
 public class Hotel {
-
+//jjjjj
 	private int price;
 	private String availableFrom;
 	private String hotelName;
