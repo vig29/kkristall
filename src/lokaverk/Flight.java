@@ -9,12 +9,13 @@ public class Flight {
   private int price;
   private String depDate;
   private String depTime;
+  private String arrDate;
   private String arrTime;
   private String flightFrom;
   private String flightTo;
   private boolean sagaClass;
   private boolean foodOnBoard;
-  private boolean seatsAvailable;
+  private int seatsAvailable;
 
 
 
@@ -71,7 +72,6 @@ public class Flight {
   public void setFlightTo(String flightTo) {
     this.flightTo = flightTo;
   }
-
   public String getFlightTo() {
     return flightTo;
   }

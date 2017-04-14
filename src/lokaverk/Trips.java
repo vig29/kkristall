@@ -13,6 +13,7 @@ public class Trips {
   private String date;
   private String startTime;
   private String endTime;
+  private String duration;
   private String compName;
   private String type;
 
@@ -27,7 +28,7 @@ public class Trips {
     this.setDate(date);
     this.setStartTime(startTime);
     this.setDuration(duration);
-    this.setType(type)
+    this.setType(type);
   }
 
   public void setPrice(int price) {
@@ -71,7 +72,7 @@ public class Trips {
   public String getStartTime() {
     return startTime;
   }
-  public void setType(type){
+  public void setType(String type){
     this.type=type;
   }
   public String getType(){

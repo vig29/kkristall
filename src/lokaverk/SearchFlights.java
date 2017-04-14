@@ -17,7 +17,7 @@ public class SearchFlights {
         mockdraft = new DBRmock();
         getList();
     }
-    public ArrayList<Flight> getList() {
+    public ArrayList<Flight> getList(){
         try {
             flightList = mockdraft.retrieveFlightList();
         } catch (Exception e) {
@@ -29,12 +29,12 @@ public class SearchFlights {
     public ArrayList<Flight> searchByLocation(String flightFrom, String flightTo) {
         filterFlightList = new ArrayList<Flight>();
         for (Flight flight : flightList) {
-            if(flight.getFlightFrom().equals(flightFrom) && flight.getFligtTo().equals(flightTo)) {
+            if(flight.getFlightFrom().equals(flightFrom) && flight.getFlightTo().equals(flightTo)) {
                 filterFlightList.add(flight);
             }
         }
         flightList = filterFlightList;
-        return flightList
+        return flightList;
     }
 
     public ArrayList<Flight> searchByFlightDate(String dateTo) {
@@ -72,7 +72,7 @@ public class SearchFlights {
         filterFlightList = new ArrayList<Flight>();
         for (Flight flight : flightList) {
             if (flight.getSagaClass())
-                filterFlightist.add(flight);
+                filterFlightList.add(flight);
         }
         flightList = filterFlightList;
         return flightList;

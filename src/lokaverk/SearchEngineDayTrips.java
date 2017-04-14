@@ -13,9 +13,9 @@ public class SearchEngineDayTrips {
     private ArrayList<Trips> filterTripList;
     private SimpleDateFormat formatDate = new SimpleDateFormat("dd-mm-yyyy");
     private DBRmock mockdraft;
-    public SearchEngine() {
+    public SearchEngineDayTrips() {
         mockdraft = new DBRmock();
-        getList();
+        getDayTripList();
 
     }
     public ArrayList<Trips> getDayTripList() {
@@ -58,14 +58,18 @@ public class SearchEngineDayTrips {
 
     public ArrayList<Trips> searchByDate(String arrDate, String depDate) {
         filterTripList = new ArrayList<Trips>();
-        Date checkArrDate = formatDate.parse(arrDate);
-        Date checkDepDate = formatDate.parse(depDate);
-        Date tripDate;
-        for (Trips trips : tripList) {
-            tripDate = formatDate.parse(trips.getDate());
-            if(tripDate.before(checkDepDate) && tripDate.after(checkArrDate)) {
-                filterTripList.add(trips);
+        try {
+            Date checkArrDate = formatDate.parse(arrDate);
+            Date checkDepDate = formatDate.parse(depDate);
+            Date tripDate;
+            for (Trips trips : tripList) {
+                tripDate = formatDate.parse(trips.getDate());
+                if(tripDate.before(checkDepDate) && tripDate.after(checkArrDate)) {
+                    filterTripList.add(trips);
+                }
             }
+        } catch (ParseException e) {
+
         }
         tripList = filterTripList;
         return tripList;

@@ -53,7 +53,7 @@ public class DBRmock implements DBRInterface {
 		hotelList.add(AkDyngja);
 		Hotel AkVerkHostel = new Hotel(4000, "15-05-2017", "Verk Hostel", "Akureyri", 2, false, false, 3);
 		hotelList.add(AkVerkHostel);
-		Hotel AkCapsuleHostel = new Hotel(, 6500"21-06-2017", "Capsule Hostel", "Akureyri", 2, true, false, 3);
+		Hotel AkCapsuleHostel = new Hotel(6500,"21-06-2017", "Capsule Hostel", "Akureyri", 2, true, false, 3);
 		hotelList.add(AkCapsuleHostel);
 		return hotelList;
 	}
@@ -77,6 +77,7 @@ public class DBRmock implements DBRInterface {
 		flightList.add(Flight7);
 		Flight Flight8 = new Flight(20000, "28-12-2017", "08:30", "09:50", "Reykjavík", "Egilsstaðir", true, true, 15);
 		flightList.add(Flight8);
+		return flightList;
 	}
 
 	public ArrayList<Trips> retrieveTripList() {
@@ -94,6 +95,7 @@ public class DBRmock implements DBRInterface {
 		tripList.add(Trip6);
 		Trips Trip7 = new Trips(35000, "Akureyri", "ATV AK", "Fjórhjólaferð", "05-07-2017", "10:00", "06:00","Adventure");
 		tripList.add(Trip7);
+		return tripList;
 	}
 }
 

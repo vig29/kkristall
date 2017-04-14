@@ -16,12 +16,12 @@ public class SearchEngine {
     
     public SearchEngine() {
     	mockdraft = new DBRmock();
-    	getList();
+		getHotelList();
  
     }
     public ArrayList<Hotel> getHotelList() {
     	try {
-0,    		hotelList = mockdraft.retrieveHotelList();
+    		hotelList = mockdraft.retrieveHotelList();
     	} catch (Exception e) {
     		System.err.println("Err: " + e.getMessage());
     	}
