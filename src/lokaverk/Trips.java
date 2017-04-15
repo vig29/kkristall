@@ -12,15 +12,14 @@ public class Trips {
   private String aboutTrip;
   private String date;
   private String startTime;
-  private String endTime;
   private String duration;
   private String compName;
   private String type;
-
+  private int tripId;
 
   // Adventure sighseeing heath
 
-  public Trips(int price, String location, String compName, String aboutTrip, String date, String startTime, String duration, String type) {
+  public Trips(int price, String location, String compName, String aboutTrip, String date, String startTime, String duration, String type, int tripId) {
     this.setPrice(price);
     this.setLocation(location);
     this.setCompName(compName);
@@ -29,6 +28,7 @@ public class Trips {
     this.setStartTime(startTime);
     this.setDuration(duration);
     this.setType(type);
+    this.setTripId(tripId);
   }
 
   public void setPrice(int price) {
@@ -72,17 +72,17 @@ public class Trips {
   public String getStartTime() {
     return startTime;
   }
-  public void setType(String type){
-    this.type=type;
-  }
+
+  public void setType(String type){ this.type=type; }
   public String getType(){
     return type;
   }
 
-  public void setDuration(String duration) {
-    this.duration = duration;
-  }
+  public void setDuration(String duration) { this.duration = duration; }
   public String getDuration() {
     return duration;
   }
+
+  public void setTripId(int tripId) { this.tripId = tripId; }
+  public int getTripId() { return tripId; }
 }

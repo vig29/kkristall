@@ -80,4 +80,24 @@ public class DBConnection {
         }
     }
 
+    public boolean existsUser(String email)
+    {
+        try {
+            String query = "select count(*) from users where email = ?;";
+            PreparedStatement st = this.connection.prepareStatement(query);
+            st.setString(1, email);
+            st.execute();
+
+            try (ResultSet generatedKeys = st.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    System.out.println(generatedKeys.getLong(1));
+                    return generatedKeys.getLong(1) > 0;
+                }
+                return false;
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+    }
 }

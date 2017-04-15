@@ -14,9 +14,10 @@ public class Hotel {
 	private boolean wifiAvailable;
 	private boolean isBreakfast;
 	private int numRooms;
+	private int hotelId;
 	
 	
-	public Hotel(int price, String availableFrom, String hotelName, String hotelLoc, int numPersons, boolean wifiAvailable, boolean isBreakfast, int numRooms) {
+	public Hotel(int price, String availableFrom, String hotelName, String hotelLoc, int numPersons, boolean wifiAvailable, boolean isBreakfast, int numRooms, int hotelId) {
 		this.setPrice(price);
 		this.setAvailableFrom(availableFrom);
 		this.setHotelName(hotelName);
@@ -25,7 +26,7 @@ public class Hotel {
 		this.setWifi(wifiAvailable);
 		this.setBreakfast(isBreakfast);
 		this.setNumRooms(numRooms);
-		
+		this.setHotelId(hotelId);
 	}
 
 	public void setPrice(int price) {
@@ -73,7 +74,6 @@ public class Hotel {
 	public void setBreakfast(boolean isBreakfast) {
 		this.isBreakfast = isBreakfast;
 	}
-	
 	public boolean getBreakfast() {
 		return isBreakfast;
 	}
@@ -81,17 +81,17 @@ public class Hotel {
 	public void setNumRooms(int numRooms) {
 		this.numRooms = numRooms;
 	}
-	
 	public int getNumRooms() {
 		return numRooms;
 	}
 
-	public void setBookedDates() {
 
-	}
+	public void setHotelId(int hotelId) { this.hotelId = hotelId; }
+	public int getHotelId() { return hotelId; }
 
-	public void isAvailable(String date) {
+	public void setBookedDates() { }
+	public void isAvailable(String date) { }
 
-	}
+
 }
 	
